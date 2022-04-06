@@ -1,0 +1,7 @@
+{
+  "name": "REST-API",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
