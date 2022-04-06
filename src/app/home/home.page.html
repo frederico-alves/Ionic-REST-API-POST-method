@@ -1,14 +1,123 @@
 <ion-header>
-  
+
     <ion-title>
       Ionic 5/Angular POST Request Example
     </ion-title>
-  
+
 </ion-header>
 
 <ion-content padding>
   <p>
       Sending a POST Request Example with Ionic 5
   </p>
-   <button ion-button (click)="sendPostRequest()">Post Data</button>
+
+<fieldset>
+  <h4>ZONE</h4>
+  <ion-select [(ngModel)]="zoneGroup" placeholder="Select One">
+    <ion-select-option *ngFor="let zone of zones" > {{zone}}</ion-select-option>
+  </ion-select>
+</fieldset>
+<br>
+
+<fieldset>
+  <h4>TEMPERATURE</h4>
+  <label>
+    <input [(ngModel)]="temperatureGroup" type='radio' value="1" name="group-temperature">
+    <span class='clickable clickable--first'>1</span>
+  </label>
+  <label>
+    <input [(ngModel)]="temperatureGroup" type='radio' value="2" name="group-temperature">
+    <span class='clickable'>2</span>
+  </label>
+  <label>
+    <input [(ngModel)]="temperatureGroup" type='radio' value="3" name="group-temperature">
+      <span class='clickable'>3</span>
+  </label>
+  <label>
+    <input [(ngModel)]="temperatureGroup" type='radio' value="4" name="group-temperature">
+      <span class='clickable'>4</span>
+  </label>
+  <label>
+    <input [(ngModel)]="temperatureGroup" type='radio' value="5" name="group-temperature">
+      <span class='clickable'>5</span>
+  </label>
+  <label>
+    <input [(ngModel)]="temperatureGroup" type='radio' value="6" name="group-temperature">
+      <span class='clickable'>6</span>
+  </label>
+</fieldset>
+<br>
+
+<fieldset>
+  <h4>AIR QUALITY</h4>
+  <label>
+    <input [(ngModel)]="airQualityGroup" type='radio' value="1" name="group-airQuality">
+    <span class='clickable clickable--first'>1</span>
+  </label>
+  <label>
+    <input [(ngModel)]="airQualityGroup" type='radio' value="2" name="group-airQuality">
+    <span class='clickable'>2</span>
+  </label>
+  <label>
+    <input [(ngModel)]="airQualityGroup" type='radio' value="3" name="group-airQuality">
+      <span class='clickable'>3</span>
+  </label>
+  <label>
+    <input [(ngModel)]="airQualityGroup" type='radio' value="4" name="group-airQuality">
+      <span class='clickable'>4</span>
+  </label>
+  <label>
+    <input [(ngModel)]="airQualityGroup" type='radio' value="5" name="group-airQuality">
+      <span class='clickable'>5</span>
+  </label>
+  <label>
+    <input [(ngModel)]="airQualityGroup" type='radio' value="6" name="group-airQuality">
+      <span class='clickable'>6</span>
+  </label>
+</fieldset>
+<br>
+
+<fieldset>
+  <h4>HUMIDITY</h4>
+  <label>
+    <input [(ngModel)]="humidityGroup" type='radio' value="1" name="group-humidity">
+    <span class='clickable clickable--first'>1</span>
+  </label>
+  <label>
+    <input [(ngModel)]="humidityGroup" type='radio' value="2" name="group-humidity">
+    <span class='clickable'>2</span>
+  </label>
+  <label>
+    <input [(ngModel)]="humidityGroup" type='radio' value="3" name="group-humidity">
+      <span class='clickable'>3</span>
+  </label>
+  <label>
+    <input [(ngModel)]="humidityGroup" type='radio' value="4" name="group-humidity">
+      <span class='clickable'>4</span>
+  </label>
+  <label>
+    <input [(ngModel)]="humidityGroup" type='radio' value="5" name="group-humidity">
+      <span class='clickable'>5</span>
+  </label>
+  <label>
+    <input [(ngModel)]="humidityGroup" type='radio' value="6" name="group-humidity">
+      <span class='clickable'>6</span>
+  </label>
+</fieldset>
+  <br><br>
+
+  <p style="font-size: 15px; margin-left: 25px;">Click the CONSOLE.LOG DATA button to check for activity in the browser's console:</p>
+  <button ion-button (click)="consoleLogData()"
+  style="font-size: 20px; padding: 10px; margin-left: 25px; background-color:lawngreen;">
+  CONSOLE.LOG DATA
+  </button>
+
+   <br><br>
+
+   <p style="font-size: 15px; margin-left: 25px;">Click the POST DATA button to save data in the API:</p>
+   <button ion-button (click)="sendPostRequest()"
+   style="font-size: 15px; padding: 7px; margin-left: 25px; background-color:orangered;">
+   POST DATA
+   </button>
+
 </ion-content>
