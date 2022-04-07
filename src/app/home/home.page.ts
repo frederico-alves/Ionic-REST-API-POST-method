@@ -28,10 +28,12 @@ export class HomePage implements OnInit {
 
 
   consoleLogData() {
+    console.log('====================');
     console.log('Zone: ', this.zoneGroup);
     console.log('Temperature: ', this.temperatureGroup);
     console.log('Air Quality: ', this.airQualityGroup);
     console.log('Humidity: ', this.humidityGroup);
+    console.log('JSON OBJECT ---->>>>');
     let YourHeaders = {'Content-Type':'application/json'};
     // let zone = this.zone;
     // let Temperature = this.Temperature;
